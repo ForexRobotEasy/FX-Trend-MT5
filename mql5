@@ -1,0 +1,91 @@
+mql5
+// FX Trend MT5
+// Developer's Site: forexroboteasy.com
+// Development: Forex Robot Easy Team
+
+// --- Global Variables ---
+int trendDirection; // Variable to store the current trend direction
+double trendDuration; // Variable to store the current trend duration
+double trendIntensity; // Variable to store the current trend intensity
+double trendRating; // Variable to store the resulting trend rating
+
+// --- Initialization ---
+void OnInit()
+{
+   // Initialize global variables
+   trendDirection = 0;
+   trendDuration = 0;
+   trendIntensity = 0;
+   trendRating = 0;
+   
+   // Display real-time trend information
+   Print('FX Trend MT5 - Real-time Trend Information:');
+   Print('=========================================');
+   Print('Trend Direction: ', trendDirection);
+   Print('Trend Duration: ', trendDuration);
+   Print('Trend Intensity: ', trendIntensity);
+   Print('Trend Rating: ', trendRating);
+}
+
+// --- Main Program ---
+void OnTick()
+{
+   // Update trend information
+   UpdateTrendInformation();
+   
+   // Display updated trend information
+   Print('Updated Trend Information:');
+   Print('==========================');
+   Print('Trend Direction: ', trendDirection);
+   Print('Trend Duration: ', trendDuration);
+   Print('Trend Intensity: ', trendIntensity);
+   Print('Trend Rating: ', trendRating);
+   
+   // Make trading decisions based on trend information
+   MakeTradingDecisions();
+}
+
+// --- Update Trend Information ---
+void UpdateTrendInformation()
+{
+   // Code to update trend direction, duration, intensity, and resulting trend rating
+   // ...
+   
+   // Update global variables with new trend information
+   trendDirection = 1; // Example: 1 for uptrend, -1 for downtrend, 0 for sideways
+   trendDuration = 5; // Example: 5 bars
+   trendIntensity = 0.7; // Example: 70%
+   trendRating = 4.5; // Example: 4.5 out of 5
+}
+
+// --- Make Trading Decisions ---
+void MakeTradingDecisions()
+{
+   // Code to make trading decisions based on trend information
+   // ...
+   
+   // Example: Buy if trend is up, sell if trend is down
+   if(trendDirection == 1)
+   {
+      Print('Make Buy Decision');
+   }
+   else if(trendDirection == -1)
+   {
+      Print('Make Sell Decision');
+   }
+   else
+   {
+      Print('No Trading Decision');
+   }
+}
+
+// --- Logical Conclusion ---
+void OnDeinit(const int reason)
+{
+   // Display logical conclusion
+   Print('FX Trend MT5 - Logical Conclusion:');
+   Print('=================================');
+   Print('Code execution completed successfully!');
+   Print('Thank you for using FX Trend MT5.');
+   Print('For more information, visit forexroboteasy.com.');
+}
